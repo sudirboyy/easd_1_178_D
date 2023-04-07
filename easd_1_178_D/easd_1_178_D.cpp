@@ -11,20 +11,26 @@
 using namespace std;
 
 // Menginputkan Prosedur
-void input(int arr[], int size) {
+void input(int arr[], int size) 
+{
     cout << "Masukkan " << size << " Elemen Array :" << endl;
-    for (int i = 0; i < size; i++) {
-        cout << "Masukkan elemen ke-" << i + 1 << " dari " << size << " elemen array:";
+    for (int i = 0; i < size; i++) 
+    {
+        cout << "Masukkan Elemen ke-" << i + 1 << " dari " << size << " Elemen array:";
         cin >> arr[i];
     }
 }
 
-void selectionSort(int arr[], int size) {
+void selectionSort(int arr[], int size) 
+{
     string initials = "MS";
-    for (int initialsIndex = 0; initialsIndex < size - 1; initialsIndex++) {
+    for (int initialsIndex = 0; initialsIndex < size - 1; initialsIndex++) 
+    {
         int min_index = initialsIndex;
-        for (int i = initialsIndex + 1; i < size; i++) {
-            if (arr[i] < arr[min_index]) {
+        for (int i = initialsIndex + 1; i < size; i++) 
+        {
+            if (arr[i] < arr[min_index]) 
+            {
                 min_index = i;
             }
         }
