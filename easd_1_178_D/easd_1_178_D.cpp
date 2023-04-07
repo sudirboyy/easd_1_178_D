@@ -10,4 +10,15 @@
 #include <string>
 using namespace std;
 
+// Menginputkan Prosedur
+void input(int arr[], int size) {
+    cout << "Masukkan " << size << " Elemen Array :" << endl;
+    for (int i = 0; i < size; i++) {
+        cout << "Masukkan " << i + 1 << " dari " << size << " elemen array:";
+        cin >> arr[i];
+    }
+}
+
+
+
 
