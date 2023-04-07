@@ -43,8 +43,8 @@ void display(int arr[], int size) {
 }
 
 int main() {
-    int size = 78;           
-    int arr[78];
+    int size = 98;   // NIM 78+20                  
+    int arr[98];
 
     input(arr, size);
 
