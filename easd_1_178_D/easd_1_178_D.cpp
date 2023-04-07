@@ -42,5 +42,18 @@ void display(int arr[], int size) {
     cout << endl;
 }
 
+int main() {
+    int size = 78;           
+    int arr[78];
+
+    input(arr, size);
+
+    selectionSort(arr, size);
+
+    display(arr, size);
+
+    return 0;
+}
+
 
 
