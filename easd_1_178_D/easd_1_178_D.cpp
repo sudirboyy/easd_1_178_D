@@ -7,60 +7,71 @@
 // 6. Membuat sebuah program Selection Sort
 
 #include <iostream>
-#include <string>
 using namespace std;
 
-// Menginputkan Prosedur
-void input(int arr[], int size) 
-{
-    cout << "Masukkan " << size << " Elemen Array :" << endl;
-    for (int i = 0; i < size; i++) 
-    {
-        cout << "Masukkan Elemen ke-" << i + 1 << " dari " << size << " Elemen array:";
-        cin >> arr[i];
-    }
+int sudir[98];
+int n;
+
+void input() {
+	while (true)
+	{
+		cout << "Masukan Jumlah Data: ";
+		cin >> n;
+
+		if (n <= 98)
+			break;
+		else
+			cout << "\nMaksimum Panjang Data adalah 98: " << endl;
+	}
+	cout << "\n====================" << endl;
+	cout << "\nMasukkan Data" << endl;
+	cout << "\n====================" << endl;
+
+	for (int i = 0; i < n; i++)
+	{
+		cout << "<" << (i + 1) << ">";
+		cin >> sudir[i];
+	}
 }
 
-void selectionSort(int arr[], int size) 
+void selectionSort(int sudir[], int n) 
 {
-    string initials = "MS";
-    for (int initialsIndex = 0; initialsIndex < size - 1; initialsIndex++) 
-    {
-        int min_index = initialsIndex;
-        for (int i = initialsIndex + 1; i < size; i++) 
-        {
-            if (arr[i] < arr[min_index]) 
-            {
-                min_index = i;
-            }
-        }
-        if (min_index != initialsIndex) {
-            swap(arr[initialsIndex], arr[min_index]);
-        }
-    }
+	for (int MS = 0; MS < n - 1; MS++) 
+	{
+		int min_index = MS;
+		for (int i = MS + 1; i < n; i++) 
+		{
+			if (sudir[i] < sudir[min_index]) 
+			{
+				min_index = i;
+			}
+		}
+		int temp = sudir[MS];
+		sudir[MS] = sudir[min_index];
+		sudir[min_index] = temp;
+	}
 }
 
-void display(int arr[], int size) 
+void display() 
 {
-    cout << "Array yang telah diurutkan : ";
-    for (int i = 0; i < size; i++) 
-    {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
+	cout << "\n===========================" << endl;
+	cout << "Urutan Data" << endl;
+	cout << "============================" << endl;
+
+	for (int i = 0; i < n; i++)
+
+	{
+		cout << sudir[i] << " ";
+	}
+
 }
 
-int main() {
-    int size = 98;   // NIM 78+20                  
-    int arr[98];
-
-    input(arr, size);
-
-    selectionSort(arr, size);
-
-    display(arr, size);
-
-    return 0;
+int main()
+{
+	input();
+	selectionSort(sudir, n);
+	display();
+	return 0;
 }
 
 
