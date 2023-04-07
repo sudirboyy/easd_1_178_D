@@ -34,9 +34,11 @@ void selectionSort(int arr[], int size) {
     }
 }
 
-void display(int arr[], int size) {
+void display(int arr[], int size) 
+{
     cout << "Array yang telah diurutkan : ";
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++) 
+    {
         cout << arr[i] << " ";
     }
     cout << endl;
