@@ -19,6 +19,20 @@ void input(int arr[], int size) {
     }
 }
 
+void selectionSort(int arr[], int size) {
+    string initials = "MS";
+    for (int initialsIndex = 0; initialsIndex < size - 1; initialsIndex++) {
+        int min_index = initialsIndex;
+        for (int i = initialsIndex + 1; i < size; i++) {
+            if (arr[i] < arr[min_index]) {
+                min_index = i;
+            }
+        }
+        if (min_index != initialsIndex) {
+            swap(arr[initialsIndex], arr[min_index]);
+        }
+    }
+}
 
 
 
